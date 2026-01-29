@@ -18,6 +18,11 @@ app.add_middleware(
     allow_headers=["*"],     # Allow all headers
 )
 
+@app.get("/")
+def read_root():
+    return {"message":"FastAPI running smootly!"}
+
+
 @app.get("/login")
 def login():
-    return {"message":"Server slow try again later"}
+    return {"message":"Working on login auth"}
